@@ -1,23 +1,27 @@
-export default function romanNumerals(){
+export default function romanNumerals() {
 
-        var numerals = [
-            {value: 4, numeral: "IV"},
-            {value: 1, numeral: "I"},
-        ];
+    var numeral = function(value, numeral){
+        return {value:value, numeral:numeral};
+    };
 
-        function fromNumber(number) {
-            var result = "";
-            numerals.forEach(function (item) {
-                for (; number >= item.value; number -= item.value) {
-                    result += item.numeral;
-                }
+    var numerals = [
+        numeral(4,"IV"),
+        numeral(1,"I")
+    ];
 
-            });
-            return result;
-        };
+    function fromNumber(number) {
+        var result = "";
+        numerals.forEach(function (item) {
+            for (; number >= item.value; number -= item.value) {
+                result += item.numeral;
+            }
+
+        });
+        return result;
+    };
 
 
-        return {
-            fromNumber,
-        }
+    return {
+        fromNumber,
+    }
 }
