@@ -1,9 +1,12 @@
 function romanNumerals() {
     function fromNumber(number) {
-        if (number == 1) {
-            return "I";
+        if (number == 3) {
+            return "III";
         }
-        return "II";
+        if (number == 2) {
+            return "II";
+        }
+        return "I";
 
     }
 
