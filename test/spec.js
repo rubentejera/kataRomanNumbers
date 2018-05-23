@@ -1,4 +1,4 @@
-const romanNumerals = require('../src/romanNumerals');
+import romanNumerals from "../src/romanNumerals";
 
 describe("test de prueba", function () {
     it("verdadero es verdadero", function () {
